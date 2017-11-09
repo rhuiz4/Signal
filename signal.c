@@ -13,7 +13,7 @@ static void sighandler(int signo){
     if(signo == SIGINT){
         
         int batman = open("bat.txt",O_APPEND | O_RDWR);
-        write(batman,"Exited because of a SIGINT", 30);
+        write(batman,"Exited because of a SIGINT\n", 30);
         close(batman);
         
         printf("Oh no! A SIGINT!\n");
